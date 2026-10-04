@@ -5,6 +5,9 @@
 - Điều kiện, vòng lặp, mảng và foreach.
 - Hàm, return, trim và require.
 - Bài FizzBuzz.
+- Đếm từ bằng trim(), preg_split() và count().
+- Nhóm sách theo tác giả, hiển thị bằng hai vòng foreach.
+- Sắp xếp tăng/giảm bằng usort() và hàm so sánh.
 
 ## Lỗi đã gặp và cách sửa
 - Nhầm $books với $book khi duyệt mảng.
