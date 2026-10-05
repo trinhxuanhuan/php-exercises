@@ -70,3 +70,32 @@
 ### Kế hoạch tiếp theo
 - Commit và push sản phẩm Day 2.
 - Review các phần còn yếu trước khi chuyển sang Day 3.
+
+# Day 3 — PHP web và PDO (đang thực hiện)
+
+## Đã thực hành
+- Chạy web PHP bằng built-in server.
+- Nhận dữ liệu từ URL và form bằng GET.
+- Nhận dữ liệu form bằng POST, kiểm tra tên sách không được trống.
+- Dùng htmlspecialchars() khi hiển thị dữ liệu trong HTML.
+- Dùng session để ghi nhớ danh sách tên sách giữa các lần truy cập.
+- Tạo database php_web_pdo và bảng books, thêm dữ liệu mẫu.
+- Kết nối MySQL bằng PDO và xem dữ liệu bằng MySQL Workbench.
+- Viết câu SELECT và dùng fetchAll() để lấy kết quả thành mảng.
+
+## Lỗi đã gặp và cách sửa
+- Terminal VS Code chưa tìm thấy mysql: dùng terminal Laragon.
+- Tên sách bị lưu sai dấu: kiểm tra bằng HEX() và sửa dữ liệu UTF-8.
+- Lưu session vào book_titles nhưng đọc book_title:
+  thống nhất khóa và dùng foreach để hiển thị danh sách.
+
+## Đang củng cố
+- Luồng trình duyệt gửi yêu cầu và PHP trả kết quả.
+- Phân biệt GET, POST và session.
+- Cách PDO thực thi SQL và đọc kết quả.
+
+## Chưa hoàn thành
+- Kiểm tra trang danh sách sách lấy dữ liệu từ MySQL.
+- Form thêm sách bằng PDO prepared statement.
+- Ghi notes.md về các vấn đề bảo mật và tổ chức code.
+- Review tổng kết Day 3.
