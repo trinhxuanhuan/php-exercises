@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 namespace App\Models;
-use App\Contracts\Borrowable;
+use App\Interface\Borrowable;
 use InvalidArgumentException;
 use App\Traits\HasTimestamps;
 class Book implements Borrowable{
     use HasTimestamps;
-    public function __construct(public string $title, private int $availableCopies){
+    public function __construct(public readonly string $title, private int $availableCopies){
         if(trim($title)===""){
             throw new InvalidArgumentException("Tên sách không được để trống");
         }

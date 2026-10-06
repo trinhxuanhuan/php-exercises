@@ -6,6 +6,7 @@ namespace App\Models;
 
 use App\Enums\LoanStatus;
 use App\Traits\HasTimestamps;
+use App\Interface\Borrowable;
 use RuntimeException;
 
 class Loan
@@ -15,7 +16,7 @@ class Loan
     private LoanStatus $status;
 
     public function __construct(
-        public readonly Book $book,
+        public readonly Borrowable $book,
         public readonly Member $member
     ) {
         $success = $book->borrow();
