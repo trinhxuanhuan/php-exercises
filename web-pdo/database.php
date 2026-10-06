@@ -1,18 +1,17 @@
 <?php
 
-$host = "127.0.0.1";
-$port = 3306;
-$database = "php_web_pdo";
-$username = "root";
-$password = "";
+$config = require __DIR__ . "/config.local.php";
 
-$dsn = "mysql:host=$host;port=$port;dbname=$database;charset=utf8mb4";
+$dsn = "mysql:host=" . $config["host"]
+    . ";port=" . $config["port"]
+    . ";dbname=" . $config["database"]
+    . ";charset=utf8mb4";
 
 try {
     $pdo = new PDO(
         $dsn,
-        $username,
-        $password,
+        $config["username"],
+        $config["password"],
         [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,

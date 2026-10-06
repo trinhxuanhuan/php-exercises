@@ -71,31 +71,29 @@
 - Commit và push sản phẩm Day 2.
 - Review các phần còn yếu trước khi chuyển sang Day 3.
 
-# Day 3 — PHP web và PDO (đang thực hiện)
+# Day 3 — PHP web và PDO
 
 ## Đã thực hành
-- Chạy web PHP bằng built-in server.
-- Nhận dữ liệu từ URL và form bằng GET.
-- Nhận dữ liệu form bằng POST, kiểm tra tên sách không được trống.
-- Dùng htmlspecialchars() khi hiển thị dữ liệu trong HTML.
-- Dùng session để ghi nhớ danh sách tên sách giữa các lần truy cập.
-- Tạo database php_web_pdo và bảng books, thêm dữ liệu mẫu.
-- Kết nối MySQL bằng PDO và xem dữ liệu bằng MySQL Workbench.
-- Viết câu SELECT và dùng fetchAll() để lấy kết quả thành mảng.
+- GET, POST, kiểm tra dữ liệu form và session.
+- Kết nối MySQL bằng PDO.
+- Hoàn thiện CRUD sách: danh sách, thêm, sửa và xóa.
+- Dùng prepared statement cho truy vấn có dữ liệu đầu vào.
+- Hiển thị dữ liệu bằng htmlspecialchars().
+- Chuyển về danh sách sau khi thêm, sửa hoặc xóa.
+- Tách cấu hình riêng vào config.local.php và bỏ qua bằng .gitignore.
+- Viết notes.md để tự review.
+- Bỏ các file demo riêng, tập trung vào ứng dụng CRUD.
 
 ## Lỗi đã gặp và cách sửa
-- Terminal VS Code chưa tìm thấy mysql: dùng terminal Laragon.
-- Tên sách bị lưu sai dấu: kiểm tra bằng HEX() và sửa dữ liệu UTF-8.
-- Lưu session vào book_titles nhưng đọc book_title:
-  thống nhất khóa và dùng foreach để hiển thị danh sách.
+- Nhập lệnh chạy PHP tại mysql>: thoát MySQL rồi chạy ở terminal Ubuntu.
+- DBeaver báo Public Key Retrieval is not allowed:
+  bật allowPublicKeyRetrieval cho kết nối MySQL local.
 
-## Đang củng cố
-- Luồng trình duyệt gửi yêu cầu và PHP trả kết quả.
-- Phân biệt GET, POST và session.
-- Cách PDO thực thi SQL và đọc kết quả.
+## Cần củng cố
+- Luồng GET mở trang và POST gửi form.
+- prepare(), execute(), fetch() và fetchAll().
+- Quan hệ giữa các trang PHP, file kết nối và database.
 
-## Chưa hoàn thành
-- Kiểm tra trang danh sách sách lấy dữ liệu từ MySQL.
-- Form thêm sách bằng PDO prepared statement.
-- Ghi notes.md về các vấn đề bảo mật và tổ chức code.
-- Review tổng kết Day 3.
+## Kế hoạch tiếp theo
+- Tiếp nhận và sửa góp ý review.
+- Bắt đầu Laravel: route, controller, Blade và cấu hình MySQL.

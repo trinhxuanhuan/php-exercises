@@ -19,6 +19,9 @@ $books = $statement->fetchAll();
 </head>
 <body>
     <h1>Danh sách sách</h1>
+    <p>
+    <a href="create.php">Thêm sách mới</a>
+</p>
 
     <?php if ($books === []): ?>
         <p>Chưa có sách nào.</p>
@@ -29,6 +32,7 @@ $books = $statement->fetchAll();
                     <th>Mã sách</th>
                     <th>Tên sách</th>
                     <th>Số bản còn lại</th>
+                    <th>Thao tác</th>
                 </tr>
             </thead>
 
@@ -49,6 +53,11 @@ $books = $statement->fetchAll();
 
                         <td>
                             <?php echo $book["available_copies"]; ?>
+                        </td>
+                        <td>
+                            <a href="edit.php?id=<?php echo $book["id"]; ?>">Sửa</a>
+                            |
+                            <a href="delete.php?id=<?php echo $book["id"]; ?>">Xóa</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
