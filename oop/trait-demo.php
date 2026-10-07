@@ -1,28 +1,44 @@
 <?php
-trait HasTimestamps{
-    private string $createAt;
-    public function initializeTimestamp():void{
-        $this -> createAt = date("Y-m-d H:i:s");
+
+trait HasTimestamps
+{
+    private string $createdAt;
+
+    public function initializeTimestamp(): void
+    {
+        $this->createdAt = date("Y-m-d H:i:s");
     }
-    public function getCreateAt(): string{
-       return $this -> createAt;
+
+    public function getCreatedAt(): string
+    {
+        return $this->createdAt;
     }
 }
-class Book{
+
+class Book
+{
     use HasTimestamps;
-    public function __construct(public string $title){
-        $this -> initializeTimestamp();
+
+    public function __construct(public string $title)
+    {
+        $this->initializeTimestamp();
     }
 }
-class Member{
+
+class Member
+{
     use HasTimestamps;
-    public function __construct(public string $name){
-        $this -> initializeTimestamp();
+
+    public function __construct(public string $name)
+    {
+        $this->initializeTimestamp();
     }
 }
+
 $book = new Book("Lão Hạc");
-echo $book->title.PHP_EOL;
-echo "Thời điểm tạo: ".$book->getCreateAt().PHP_EOL;
+echo $book->title . PHP_EOL;
+echo "Thời điểm tạo: " . $book->getCreatedAt() . PHP_EOL;
+
 $member = new Member("Nguyễn Văn A");
-echo $member->name.PHP_EOL;
-echo "Thời điểm tạo: ".$book->getCreateAt().PHP_EOL;
+echo $member->name . PHP_EOL;
+echo "Thời điểm tạo: " . $member->getCreatedAt() . PHP_EOL;
