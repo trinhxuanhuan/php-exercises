@@ -70,3 +70,30 @@
 ### Kế hoạch tiếp theo
 - Commit và push sản phẩm Day 2.
 - Review các phần còn yếu trước khi chuyển sang Day 3.
+
+# Day 3 — PHP web và PDO
+
+## Đã thực hành
+- GET, POST, kiểm tra dữ liệu form và session.
+- Kết nối MySQL bằng PDO.
+- Hoàn thiện CRUD sách: danh sách, thêm, sửa và xóa.
+- Dùng prepared statement cho truy vấn có dữ liệu đầu vào.
+- Hiển thị dữ liệu bằng htmlspecialchars().
+- Chuyển về danh sách sau khi thêm, sửa hoặc xóa.
+- Tách cấu hình riêng vào config.local.php và bỏ qua bằng .gitignore.
+- Viết notes.md để tự review.
+- Bỏ các file demo riêng, tập trung vào ứng dụng CRUD.
+
+## Lỗi đã gặp và cách sửa
+- Nhập lệnh chạy PHP tại mysql>: thoát MySQL rồi chạy ở terminal Ubuntu.
+- DBeaver báo Public Key Retrieval is not allowed:
+  bật allowPublicKeyRetrieval cho kết nối MySQL local.
+
+## Cần củng cố
+- Luồng GET mở trang và POST gửi form.
+- prepare(), execute(), fetch() và fetchAll().
+- Quan hệ giữa các trang PHP, file kết nối và database.
+
+## Kế hoạch tiếp theo
+- Tiếp nhận và sửa góp ý review.
+- Bắt đầu Laravel: route, controller, Blade và cấu hình MySQL.
